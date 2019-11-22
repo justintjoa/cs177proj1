@@ -19,7 +19,7 @@ using namespace std;
 				chart[i][j] = 0;
 			}
 		}
-		double cost1 = m - c;
+		double cost1 = -c;
 		double cost2 = -2*d;
 		double finalcost = max(cost1,cost2);
 		char origin;
@@ -28,7 +28,10 @@ using namespace std;
 			// cout << (b.at(i)) << " bews" << endl;
 			// cout << origin << endl;
 			if ((b.at(i)) == origin) {
-				chart[i][0] = c;
+				if (i != 0) {
+					chart[0][0] = finalcost;
+				}
+				chart[i][0] = m;
 				break;
 			}
 		}
@@ -37,7 +40,7 @@ using namespace std;
 			// cout << (a.at(i)) << " cews" << endl;
 			// cout << origin << endl;
 			if ((a.at(i)) == origin) {
-				chart[0][i] = c;
+				chart[0][i] = m;
 				break;
 			}
 		}
@@ -47,7 +50,6 @@ using namespace std;
 			}
 			cout << endl;
 		}
-		chart[0][0] = chart[0][0] + finalcost;
 		for (int i = 1; i < width; i++) {
 			chart[0][i] = chart[0][i-1] + chart[0][i] - d;
 		}
@@ -89,49 +91,26 @@ using namespace std;
 				extra2 = j - previousdimension;
 				if (a.at(j) != b.at(i)) {
 					if (extra1 == extra2) {
-						chart[i][j] = finalcost + finalvalue;
+						double diagonal = finalcost + finalvalue;
+						chart[i][j] = diagonal;
 					}
 					if (extra1 != extra2) {
-						chart[i][j] = finalvalue - d;
+						double notdiagonal;
+						notdiagonal = finalvalue - d;
+						chart[i][j] = notdiagonal;
 					}
 					continue;
 				}
 				if (a.at(j) == b.at(i)) {
-					string test1;
-					string test2;
-					test1 = a.substr(0,j);
-					test2 = b.substr(0,i);
-					size_t occ1 = std::count(test1.begin(), test1.end(), a.at(j));
-					size_t occ2 = std::count(test2.begin(), test2.end(), a.at(j));
-					string M;
-					M = "BBB";
-					size_t occ3 = std::count(M.begin(), M.begin()+3, M.at(0));
-					// cout << "test" << occ3 << endl;
-					// cout << a.at(j) << endl;
-					// cout << "row" << i+1 << endl;
-					// cout << test1 << endl;
-					// cout << test2 << endl;
-					// cout << "occ1 is" << occ1 << endl;
-					// cout << "occ2 is" << occ2 << endl;
-					if (occ1 == occ2) {
-						if (extra1 == extra2) {
-							chart[i][j] = finalvalue + m;
-						}
-						if (extra1 != extra2) {
-							double include;
-							double noinclude;
-							include = chart[i-1][j-1] + m;
-							noinclude = finalvalue - d;
-							chart[i][j] = max(include,noinclude);
-						}
+					if (extra1 == extra2) {
+						chart[i][j] = finalvalue + m;
 					}
-					else {
-						if (extra1 == extra2) {
-							chart[i][j] = finalvalue + finalcost;
-						}
-						if (extra1 != extra2) {
-							chart[i][j] = finalvalue - d;
-						}
+					if (extra1 != extra2) {
+						double include;
+						double noinclude;
+						include = chart[i-1][j-1] + m;
+						noinclude = finalvalue - d;
+						chart[i][j] = max(include,noinclude);
 					}
 					continue;
 				}
