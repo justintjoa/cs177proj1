@@ -64,56 +64,17 @@ using namespace std;
 		}
 		for (int i = 1; i < height; i++) {
 			for (int j = 1; j < width; j++) {
-				double value1 = chart[i-1][j];
-				double value2 = chart[i-1][j-1];
-				double value3 = chart[i][j-1];
-				double finalvalue = max(value1,value2);
-				finalvalue = max(finalvalue,value3);
-				int previousheight = 0;
-				int previouswidth = 0;
-				int previousdimension = 0;
-				if (finalvalue == value1) {
-					previousheight = i-1;
-					previouswidth = j;
-				}
-				if (finalvalue == value2) {
-					previousheight = i-1;
-					previouswidth = j-1;
-				}
-				if (finalvalue == value3) {
-					previousheight = i;
-					previouswidth = j-1;
-				}
-				previousdimension = min(previousheight,previouswidth);
-				int extra1;
-				int extra2;
-				extra1 = i - previousdimension;
-				extra2 = j - previousdimension;
-				if (a.at(j) != b.at(i)) {
-					if (extra1 == extra2) {
-						double diagonal = finalcost + finalvalue;
-						chart[i][j] = diagonal;
-					}
-					if (extra1 != extra2) {
-						double notdiagonal;
-						notdiagonal = finalvalue - d;
-						chart[i][j] = notdiagonal;
-					}
-					continue;
-				}
+				double cost;
+				cost = finalcost;
 				if (a.at(j) == b.at(i)) {
-					if (extra1 == extra2) {
-						chart[i][j] = finalvalue + m;
-					}
-					if (extra1 != extra2) {
-						double include;
-						double noinclude;
-						include = chart[i-1][j-1] + m;
-						noinclude = finalvalue - d;
-						chart[i][j] = max(include,noinclude);
-					}
-					continue;
+					cost = m;
 				}
+				double diagonal;
+				diagonal = chart[i-1][j-1] + cost;
+				double notdiagonal;
+				notdiagonal = max(chart[i][j-1]-d,chart[i-1][j]-d);
+				chart[i][j] = max(diagonal,notdiagonal);
+				continue;
 			}
 		}
 		for (int i = 0; i < height; i++) {

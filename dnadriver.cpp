@@ -11,6 +11,7 @@ int main() {
 	string c = "ACGTACGTACGT";
 	string d = "ACGTACGTACGTACGT";
 	DNAreader f(a,b,2,1,2);
+	DNAreader g(c,d,2,1,0.5);
 	return 0;
 
 
