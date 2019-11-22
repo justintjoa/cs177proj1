@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+class DNAreader {
+	public:
+		void addstrand(string a);
+		void deletebase(int strand);
+		void replacebase(int strand);
+		void matchpairs(int m, int c, int d)
+
+
+	private:	
+		vector<string> collection;
+		int similarity;
+		int delete;
+		int replace;
+		int match;
+
+
+};
