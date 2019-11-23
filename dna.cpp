@@ -30,6 +30,8 @@ using namespace std;
 			if ((b.at(i)) == origin) {
 				if (i != 0) {
 					chart[0][0] = finalcost;
+					chart[i][0] = m + c;
+					break;
 				}
 				chart[i][0] = m;
 				break;
@@ -41,6 +43,9 @@ using namespace std;
 			// cout << origin << endl;
 			if ((a.at(i)) == origin) {
 				chart[0][i] = m;
+				if (i != 0) {
+					chart[0][i] = chart[0][i] + c;
+				}
 				break;
 			}
 		}
