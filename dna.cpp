@@ -10,6 +10,7 @@
 #include "dna.h"
 using namespace std;
 
+
 	DNAreader::DNAreader(string a, string b, double m, double c, double d) {
 		c = -c;
 		d = -d;
@@ -34,7 +35,7 @@ using namespace std;
 		collection.push_back(b);
 		int height = b.size();
 		int width = a.size();
-		double chart[height][width];
+		auto chart = new double[height][5000]; 
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
 				chart[i][j] = 0;
@@ -103,14 +104,9 @@ using namespace std;
 				continue;
 			}
 		}
-		// for (int i = 0; i < height; i++) {
-		// 	for (int j = 0; j < width; j++) {
-		// 		cout << chart[i][j] << " ";
-		// 	}
-		// 	cout << endl;
-		// }
-		// cout << "result is" << endl;
-		cout << std::setprecision(4) << chart[height-1][width-1] << endl;
+		std::cout.precision(4);
+    	std::cout.setf(std::ios::fixed);
+		cout << chart[height-1][width-1] << endl;
 		// cout << "done" << endl;
 	}
 
