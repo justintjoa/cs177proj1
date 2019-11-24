@@ -1,5 +1,5 @@
-DNA: dna.o dnadriver.o
-	g++ -o DNA dna.o dnadriver.o
+prog3: dna.o dnadriver.o
+	g++ -o prog3 dna.o dnadriver.o
 
 clean:
-	/bin/rm -f *.o DNA
+	/bin/rm -f *.o prog3
