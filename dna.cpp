@@ -4,10 +4,15 @@
 #include <string.h> 
 #include <iomanip>
 #include <algorithm>
+#include <algorithm>
+#include <string>
+#include <stdio.h>
 #include "dna.h"
 using namespace std;
 
 	DNAreader::DNAreader(string a, string b, double m, double c, double d) {
+		c = -c;
+		d = -d;
 		similarity = 0;
 		collection.push_back(a);
 		collection.push_back(b);
@@ -49,24 +54,24 @@ using namespace std;
 				break;
 			}
 		}
-		for (int i = 0; i < height; i++) {
-			for (int j = 0; j < width; j++) {
-				cout << chart[i][j] << " ";
-			}
-			cout << endl;
-		}
+		// for (int i = 0; i < height; i++) {
+		// 	for (int j = 0; j < width; j++) {
+		// 		cout << chart[i][j] << " ";
+		// 	}
+		// 	cout << endl;
+		// }
 		for (int i = 1; i < width; i++) {
 			chart[0][i] = chart[0][i-1] + chart[0][i] - d;
 		}
 		for (int i = 1; i < height; i++) {
 			chart[i][0] = chart[i-1][0] + chart[i][0] - d;
 		}
-		for (int i = 0; i < height; i++) {
-			for (int j = 0; j < width; j++) {
-				cout << chart[i][j] << " ";
-			}
-			cout << endl;
-		}
+		// for (int i = 0; i < height; i++) {
+		// 	for (int j = 0; j < width; j++) {
+		// 		cout << chart[i][j] << " ";
+		// 	}
+		// 	cout << endl;
+		// }
 		for (int i = 1; i < height; i++) {
 			for (int j = 1; j < width; j++) {
 				double cost;
@@ -82,13 +87,15 @@ using namespace std;
 				continue;
 			}
 		}
-		for (int i = 0; i < height; i++) {
-			for (int j = 0; j < width; j++) {
-				cout << chart[i][j] << " ";
-			}
-			cout << endl;
-		}
-		cout << "done" << endl;
+		// for (int i = 0; i < height; i++) {
+		// 	for (int j = 0; j < width; j++) {
+		// 		cout << chart[i][j] << " ";
+		// 	}
+		// 	cout << endl;
+		// }
+		// cout << "result is" << endl;
+		cout << std::setprecision(4) << chart[height-1][width-1] << endl;
+		// cout << "done" << endl;
 	}
 
 	DNAreader::~DNAreader() {
