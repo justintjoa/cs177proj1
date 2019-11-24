@@ -22,6 +22,8 @@ int main(int argc, char* argv[])
     bool erase = false;
     bool stringone = false;
     bool stringtwo = false;
+    bool hadonestring = false;
+    bool hadtwostring = false;
     for(int i=0; i<argc; i++) {   
     	if (score == true) {
     		m = stod(argv[i]);
@@ -39,6 +41,7 @@ int main(int argc, char* argv[])
     		continue;
     	}
     	if (stringone == true) {
+    		hadonestring = true;
     		std::ifstream ifs(argv[i]);
     		a = string((std::istreambuf_iterator<char>(ifs)),
                   (std::istreambuf_iterator<char>()));
@@ -47,6 +50,7 @@ int main(int argc, char* argv[])
     		continue;
     	}
     	if (stringtwo == true) {
+    		hadtwostring = true;
     		std::ifstream ifs(argv[i]);
     		b = string((std::istreambuf_iterator<char>(ifs)),
                   (std::istreambuf_iterator<char>()));
@@ -75,6 +79,14 @@ int main(int argc, char* argv[])
     		continue;
     	}
     	
+    }
+    if ((score == true) || (erase == true) || (change == true) || (stringone == true) || (stringtwo == true)) {
+    	cout << "invalid input" << endl;
+    	return 0;
+    }
+    if (!((hadonestring == true) && (hadtwostring == true))) {
+    	cout << "invalid input" << endl;
+    	return 0;
     }
 	DNAreader k(a,b,m,c,d);
 	// string f1 = "CTGGGCTAAAAGGTCCCTTAGCCTATTTAGAAAAATGGGCCATTAGGAAATTGCAAGGAAGAACCATTCGTGAGAGGGATTAGCTGAGCTCTTTTGACTCTCTAATCACCCCTCCGTGCT";
