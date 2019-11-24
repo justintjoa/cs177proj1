@@ -13,6 +13,22 @@ using namespace std;
 	DNAreader::DNAreader(string a, string b, double m, double c, double d) {
 		c = -c;
 		d = -d;
+		if ((strcmp(a.c_str(),"") == 0) && (strcmp(b.c_str(),"") == 0)) {
+			cout << 0 << endl;
+			return;
+		}
+		if (strcmp(a.c_str(),"") == 0) {
+			double product;
+			product = -d*(b.size());
+			cout << product << endl;
+			return;
+		}
+		if (strcmp(b.c_str(),"") == 0) {
+			double product;
+			product = -d*(a.size());
+			cout << product << endl;
+			return;
+		}
 		similarity = 0;
 		collection.push_back(a);
 		collection.push_back(b);
