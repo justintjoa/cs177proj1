@@ -52,10 +52,11 @@ using namespace std;
 			if ((b.at(i)) == origin) {
 				if (i != 0) {
 					chart[0][0] = finalcost;
-					chart[i][0] = m + c;
+					double zero = 0;
+					chart[i][0] = max(m + c,zero);
 					break;
 				}
-				chart[i][0] = m;
+				chart[i][0] = max(m,finalcost);
 				break;
 			}
 		}
@@ -64,9 +65,9 @@ using namespace std;
 			// cout << (a.at(i)) << " cews" << endl;
 			// cout << origin << endl;
 			if ((a.at(i)) == origin) {
-				chart[0][i] = m;
 				if (i != 0) {
-					chart[0][i] = chart[0][i] + c;
+					double zero = 0;
+					chart[0][i] = max(m + c,zero);
 				}
 				break;
 			}
@@ -97,13 +98,19 @@ using namespace std;
 					cost = m;
 				}
 				double diagonal;
-				diagonal = chart[i-1][j-1] + cost;
+				diagonal = max(chart[i-1][j-1] + cost,chart[i-1][j-1] - c);
 				double notdiagonal;
 				notdiagonal = max(chart[i][j-1]-d,chart[i-1][j]-d);
 				chart[i][j] = max(diagonal,notdiagonal);
 				continue;
 			}
 		}
+		// for (int i = 0; i < height; i++) {
+		// 	for (int j = 0; j < width; j++) {
+		// 		cout << chart[i][j] << " ";
+		// 	}
+		// 	cout << endl;
+		// }
 		std::cout.precision(4);
     	std::cout.setf(std::ios::fixed);
 		cout << chart[height-1][width-1] << endl;
