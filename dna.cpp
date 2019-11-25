@@ -52,8 +52,12 @@ using namespace std;
 			if ((b.at(i)) == origin) {
 				if (i != 0) {
 					chart[0][0] = finalcost;
-					double zero = 0;
-					chart[i][0] = max(m + c,zero);
+					if (m > -c) {
+						chart[i][0] = m + c;
+					}
+					else {
+						chart[i][0] = 0;
+					}
 					break;
 				}
 				chart[i][0] = max(m,finalcost);
@@ -66,8 +70,12 @@ using namespace std;
 			// cout << origin << endl;
 			if ((a.at(i)) == origin) {
 				if (i != 0) {
-					double zero = 0;
-					chart[0][i] = max(m + c,zero);
+					if (m > -c) {
+						chart[0][i] = m + c;
+					}
+					else {
+						chart[0][i] = 0;
+					}
 				}
 				break;
 			}
