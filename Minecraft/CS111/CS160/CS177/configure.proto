@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package proj1
+
+message message1 {
+    required int32 type;
+    message body {
+        required int32 key
+        required string new
+    }
+
+  }
