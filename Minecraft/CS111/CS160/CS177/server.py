@@ -38,7 +38,7 @@ getvalue.flag = "Current value"
 
 getvalue = configure_pb2.m2()
 getvalue.type = 7
-getvalue.count = 0
+
 
 
 
@@ -48,9 +48,9 @@ getvalue.count = 0
 while (True):
     sock.sendall(request)
     data = sock.recv(32)
-    m_len = data[0:1]
-    length = len(m_len) + 2
-    while (len(data) < length):
+    m_len = int.from_bytes(data[0:2], "big") + 2
+    print(m_len)
+    while (len(data) < m_len):
         data = data + sock.recv(32) 
     #by now, should have gotten the whole package
     print('server response is')
@@ -61,7 +61,12 @@ while (True):
     if (command == b'\x01'): #setvalue
         print('f1')
         temp = configure_pb2.m1()
+        data = data[2:]
+        print(data)
         temp.ParseFromString(data)
+        print(temp.type)
+        print(temp.value)
+        print(temp.key)
         break
     if (command == b'\x03'): #getvalue
         print('f2')
@@ -69,6 +74,7 @@ while (True):
         temp.ParseFromString(data)
         break
     if (command == b'\x06'): #getcount
+        getvalue.count = len(dictionary)
         getvaluemessage = getvalue.SerializeToString()
         getvaluelength = (len(getvaluemessage))
         getvaluelength=getvaluelength.to_bytes(2, 'big')

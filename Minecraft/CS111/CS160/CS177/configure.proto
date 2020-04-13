@@ -7,9 +7,10 @@ message m0 {
 }
 
 message m1 {
-    uint32 type = 2;
-    string value = 3;
-    uint32 key = 1;
+
+    uint32 type = 1;
+    string value = 2;
+    uint32 key = 3;
 }
 
 

@@ -18,7 +18,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='proj1',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=b'\n\x0f\x63onfigure.proto\x12\x05proj1\"\x12\n\x02m0\x12\x0c\n\x04type\x18\x01 \x01(\r\".\n\x02m1\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\r\n\x05value\x18\x03 \x01(\t\x12\x0b\n\x03key\x18\x01 \x01(\r\"!\n\x02m2\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\" \n\x02m3\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0c\n\x04\x66lag\x18\x02 \x01(\tb\x06proto3'
+  serialized_pb=b'\n\x0f\x63onfigure.proto\x12\x05proj1\"\x12\n\x02m0\x12\x0c\n\x04type\x18\x01 \x01(\r\".\n\x02m1\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\t\x12\x0b\n\x03key\x18\x03 \x01(\r\"!\n\x02m2\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\" \n\x02m3\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0c\n\x04\x66lag\x18\x02 \x01(\tb\x06proto3'
 )
 
 
@@ -64,21 +64,21 @@ _M1 = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='type', full_name='proj1.m1.type', index=0,
-      number=2, type=13, cpp_type=3, label=1,
+      number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='value', full_name='proj1.m1.value', index=1,
-      number=3, type=9, cpp_type=9, label=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='key', full_name='proj1.m1.key', index=2,
-      number=1, type=13, cpp_type=3, label=1,
+      number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
