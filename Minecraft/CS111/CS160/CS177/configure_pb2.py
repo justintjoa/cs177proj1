@@ -18,10 +18,41 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='proj1',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=b'\n\x0f\x63onfigure.proto\x12\x05proj1\" \n\x02m1\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0c\n\x04\x62ody\x18\x02 \x01(\tb\x06proto3'
+  serialized_pb=b'\n\x0f\x63onfigure.proto\x12\x05proj1\"\x12\n\x02m0\x12\x0c\n\x04type\x18\x01 \x01(\r\".\n\x02m1\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0b\n\x03key\x18\x02 \x01(\r\x12\r\n\x05value\x18\x03 \x01(\t\"\x12\n\x02m2\x12\x0c\n\x04type\x18\x01 \x01(\r\"\x1f\n\x02m3\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0b\n\x03key\x18\x02 \x01(\r\"!\n\x02m4\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05value\x18\x02 \x01(\t\"\x12\n\x02m5\x12\x0c\n\x04type\x18\x01 \x01(\r\"\x12\n\x02m6\x12\x0c\n\x04type\x18\x01 \x01(\r\"!\n\x02m7\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\"!\n\x02m8\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05\x65rror\x18\x02 \x01(\t\" \n\x02m9\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0c\n\x04\x66lag\x18\x02 \x01(\tb\x06proto3'
 )
 
 
+
+
+_M0 = _descriptor.Descriptor(
+  name='m0',
+  full_name='proj1.m0',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='proj1.m0.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=26,
+  serialized_end=44,
+)
 
 
 _M1 = _descriptor.Descriptor(
@@ -39,7 +70,121 @@ _M1 = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='body', full_name='proj1.m1.body', index=1,
+      name='key', full_name='proj1.m1.key', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='proj1.m1.value', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=46,
+  serialized_end=92,
+)
+
+
+_M2 = _descriptor.Descriptor(
+  name='m2',
+  full_name='proj1.m2',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='proj1.m2.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=94,
+  serialized_end=112,
+)
+
+
+_M3 = _descriptor.Descriptor(
+  name='m3',
+  full_name='proj1.m3',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='proj1.m3.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='key', full_name='proj1.m3.key', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=114,
+  serialized_end=145,
+)
+
+
+_M4 = _descriptor.Descriptor(
+  name='m4',
+  full_name='proj1.m4',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='proj1.m4.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='proj1.m4.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -57,12 +202,204 @@ _M1 = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26,
-  serialized_end=58,
+  serialized_start=147,
+  serialized_end=180,
 )
 
+
+_M5 = _descriptor.Descriptor(
+  name='m5',
+  full_name='proj1.m5',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='proj1.m5.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=182,
+  serialized_end=200,
+)
+
+
+_M6 = _descriptor.Descriptor(
+  name='m6',
+  full_name='proj1.m6',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='proj1.m6.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=202,
+  serialized_end=220,
+)
+
+
+_M7 = _descriptor.Descriptor(
+  name='m7',
+  full_name='proj1.m7',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='proj1.m7.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='proj1.m7.count', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=222,
+  serialized_end=255,
+)
+
+
+_M8 = _descriptor.Descriptor(
+  name='m8',
+  full_name='proj1.m8',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='proj1.m8.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='error', full_name='proj1.m8.error', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=257,
+  serialized_end=290,
+)
+
+
+_M9 = _descriptor.Descriptor(
+  name='m9',
+  full_name='proj1.m9',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='proj1.m9.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='flag', full_name='proj1.m9.flag', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=292,
+  serialized_end=324,
+)
+
+DESCRIPTOR.message_types_by_name['m0'] = _M0
 DESCRIPTOR.message_types_by_name['m1'] = _M1
+DESCRIPTOR.message_types_by_name['m2'] = _M2
+DESCRIPTOR.message_types_by_name['m3'] = _M3
+DESCRIPTOR.message_types_by_name['m4'] = _M4
+DESCRIPTOR.message_types_by_name['m5'] = _M5
+DESCRIPTOR.message_types_by_name['m6'] = _M6
+DESCRIPTOR.message_types_by_name['m7'] = _M7
+DESCRIPTOR.message_types_by_name['m8'] = _M8
+DESCRIPTOR.message_types_by_name['m9'] = _M9
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+m0 = _reflection.GeneratedProtocolMessageType('m0', (_message.Message,), {
+  'DESCRIPTOR' : _M0,
+  '__module__' : 'configure_pb2'
+  # @@protoc_insertion_point(class_scope:proj1.m0)
+  })
+_sym_db.RegisterMessage(m0)
 
 m1 = _reflection.GeneratedProtocolMessageType('m1', (_message.Message,), {
   'DESCRIPTOR' : _M1,
@@ -70,6 +407,62 @@ m1 = _reflection.GeneratedProtocolMessageType('m1', (_message.Message,), {
   # @@protoc_insertion_point(class_scope:proj1.m1)
   })
 _sym_db.RegisterMessage(m1)
+
+m2 = _reflection.GeneratedProtocolMessageType('m2', (_message.Message,), {
+  'DESCRIPTOR' : _M2,
+  '__module__' : 'configure_pb2'
+  # @@protoc_insertion_point(class_scope:proj1.m2)
+  })
+_sym_db.RegisterMessage(m2)
+
+m3 = _reflection.GeneratedProtocolMessageType('m3', (_message.Message,), {
+  'DESCRIPTOR' : _M3,
+  '__module__' : 'configure_pb2'
+  # @@protoc_insertion_point(class_scope:proj1.m3)
+  })
+_sym_db.RegisterMessage(m3)
+
+m4 = _reflection.GeneratedProtocolMessageType('m4', (_message.Message,), {
+  'DESCRIPTOR' : _M4,
+  '__module__' : 'configure_pb2'
+  # @@protoc_insertion_point(class_scope:proj1.m4)
+  })
+_sym_db.RegisterMessage(m4)
+
+m5 = _reflection.GeneratedProtocolMessageType('m5', (_message.Message,), {
+  'DESCRIPTOR' : _M5,
+  '__module__' : 'configure_pb2'
+  # @@protoc_insertion_point(class_scope:proj1.m5)
+  })
+_sym_db.RegisterMessage(m5)
+
+m6 = _reflection.GeneratedProtocolMessageType('m6', (_message.Message,), {
+  'DESCRIPTOR' : _M6,
+  '__module__' : 'configure_pb2'
+  # @@protoc_insertion_point(class_scope:proj1.m6)
+  })
+_sym_db.RegisterMessage(m6)
+
+m7 = _reflection.GeneratedProtocolMessageType('m7', (_message.Message,), {
+  'DESCRIPTOR' : _M7,
+  '__module__' : 'configure_pb2'
+  # @@protoc_insertion_point(class_scope:proj1.m7)
+  })
+_sym_db.RegisterMessage(m7)
+
+m8 = _reflection.GeneratedProtocolMessageType('m8', (_message.Message,), {
+  'DESCRIPTOR' : _M8,
+  '__module__' : 'configure_pb2'
+  # @@protoc_insertion_point(class_scope:proj1.m8)
+  })
+_sym_db.RegisterMessage(m8)
+
+m9 = _reflection.GeneratedProtocolMessageType('m9', (_message.Message,), {
+  'DESCRIPTOR' : _M9,
+  '__module__' : 'configure_pb2'
+  # @@protoc_insertion_point(class_scope:proj1.m9)
+  })
+_sym_db.RegisterMessage(m9)
 
 
 # @@protoc_insertion_point(module_scope)

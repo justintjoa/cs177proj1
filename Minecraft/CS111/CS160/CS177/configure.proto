@@ -2,7 +2,49 @@ syntax = "proto3";
 
 package proj1;
 
+message m0 {
+    uint32 type = 1;
+}
+
 message m1 {
     uint32 type = 1;
-    string body = 2;
+    uint32 key = 2;
+    string value = 3;
+}
+
+message m2 {
+    uint32 type = 1;
+}
+
+message m3 {
+    uint32 type = 1;
+    uint32 key = 2;
+}
+
+message m4 {
+    uint32 type = 1;
+    string value = 2;
+}
+
+message m5 {
+    uint32 type = 1;
+}
+
+message m6 {
+    uint32 type = 1;
+}
+
+message m7 {
+    uint32 type = 1;
+    uint32 count = 2;
+}
+
+message m8 {
+    uint32 type = 1;
+    string error = 2;
+}
+
+message m9 {
+    uint32 type = 1;
+    string flag = 2;
 }
