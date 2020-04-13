@@ -4,4 +4,4 @@ protoc -I=. --python_out=. ./configure.proto
 
 
 activate environment:
-source example/bin/activate
+source env/bin/activate
